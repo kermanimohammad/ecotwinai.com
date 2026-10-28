@@ -1,0 +1,22 @@
+---
+description: When the user writes بررسی کن, commit and push local changes to GitHub
+alwaysApply: true
+---
+
+# Push after «بررسی کن»
+
+When the user's message contains «بررسی کن»:
+
+1. Do the review or check they asked for, and apply the fixes that belong to that check.
+2. Then commit and push every resulting change, including this rule file if it is still untracked.
+3. If there is nothing to commit, say so and do not create an empty commit.
+
+Commit rules:
+
+- Follow the git safety protocol. Never update git config, never skip hooks, never force-push, never amend unless the protocol allows it.
+- Do not commit secrets (`.env`, credentials, tokens).
+- Stage only the project changes from that check.
+- Use a 1–2 sentence message that states why the change was made.
+- Remote is `origin` on `https://github.com/kermanimohammad/ecotwinai.com`. Push the current branch with `git push`. If it has no upstream, use `git push -u origin HEAD`.
+
+Example trigger: «بررسی کن» or «صفحه را بررسی کن».
