@@ -1,0 +1,60 @@
+# EcoTwin AI
+
+> EcoTwin AI builds software for urban design and energy simulation. The product is Eco Digital Twin Sandbox, a browser workspace at https://app.ecotwinai.com. This file is a factual summary for language models and answer engines. The marketing site is https://ecotwinai.com.
+
+EcoTwin AI helps architects, urban planners, energy and sustainability consultants, researchers, municipalities, and engineering teams shape more sustainable cities, from early massing to performance-ready digital twins.
+
+This website introduces the company. It is not the 3D editor, and it does not take payment.
+
+## Product
+
+Eco Digital Twin Sandbox is a browser-based 3D urban modeling workspace.
+
+Available now:
+
+- Real-time 3D modeling of buildings, trees, furniture, and terrain, with draw, transform, mesh edit, snap, and measure tools
+- Surface Types for plants, soils, water, roads, buildings, optical materials, carbon emission factors, PV parameters, and generic surfaces, aligned with CDT-UBEM-style data
+- Map Bridge import of buildings from OpenStreetMap and Overture, with heights where the sources provide them, plus georeferencing and GeoJSON import
+- Project package .CDT (CityDigTwin) and .ecofile; mesh export to STL, OBJ, GLB, and FBX
+- Email accounts, Google and Microsoft sign-in when configured, and Stripe subscriptions
+
+Not generally available yet. These are rolling out, and the in-app Simulation menu is not open to every user:
+
+- PALM urban microclimate simulation
+- EnergyPlus building energy analysis
+- In-scene result visualization
+- Scenario comparison
+- Expanded carbon and surface performance workflows
+
+Further ahead, and not in the product today: cloud collaboration, deeper city-scale GIS workflows, and enterprise or team plans.
+
+## Pricing
+
+Individual plans in USD, billed inside the app with Stripe Checkout:
+
+- Weekly: $10
+- Monthly: $35
+- Quarterly: $100
+- Yearly: $350
+
+Save and Export require an active subscription. Card numbers are handled by Stripe, not stored by EcoTwin AI.
+
+## Links
+
+- [Company site](https://ecotwinai.com/)
+- [Open the sandbox](https://app.ecotwinai.com)
+- [Sign in](https://app.ecotwinai.com/auth/login.html)
+- [Create an account](https://app.ecotwinai.com/auth/register.html)
+- [Subscribe](https://app.ecotwinai.com/auth/subscribe.html)
+- [Tutorials on YouTube](https://www.youtube.com/@EcoTwinAI)
+- [Questions on the company site](https://ecotwinai.com/#questions)
+- [Privacy placeholder](https://ecotwinai.com/privacy.html)
+- [Terms placeholder](https://ecotwinai.com/terms.html)
+- Contact form on the company site: https://ecotwinai.com/#contact (visitor email and message are emailed to noreply@ecotwinai.com)
+- Contact: hello@ecotwinai.com
+
+## Do not claim
+
+- Do not say simulation runs are fully available to all users today.
+- Do not invent customers, awards, user counts, or performance metrics.
+- Do not describe this marketing site as the 3D editor.

@@ -4,18 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EcoTwin AI — Urban Design &amp; Energy Simulation</title>
-    <meta name="description" content="EcoTwin AI builds Eco Digital Twin Sandbox, a browser workspace for urban design and energy simulation. Model cities in 3D, assign real surfaces, and open the app.">
+    <meta name="description" content="EcoTwin AI builds Eco Digital Twin Sandbox, a browser workspace where architects and planners model cities in 3D, assign surface properties, and prepare urban energy and microclimate studies.">
     <link rel="canonical" href="https://ecotwinai.com/">
-    <meta name="theme-color" content="#0c1412">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#e5f4fc">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="EcoTwin AI">
     <meta property="og:title" content="EcoTwin AI — Urban Design &amp; Energy Simulation">
     <meta property="og:description" content="Model buildings and landscapes in 3D, assign real surface properties, and prepare for microclimate and energy analysis. Open Eco Digital Twin Sandbox.">
     <meta property="og:url" content="https://ecotwinai.com/">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://ecotwinai.com/images/hero-neighborhood.jpg">
+    <meta property="og:image:alt" content="Daylight view of a mixed neighborhood with tree-lined streets, low and mid-rise buildings, and a small park.">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EcoTwin AI — Urban Design &amp; Energy Simulation">
     <meta name="twitter:description" content="A browser sandbox for sustainable urban design, from early massing to performance-ready digital twins.">
+    <meta name="twitter:image" content="https://ecotwinai.com/images/hero-neighborhood.jpg">
+    <meta name="twitter:image:alt" content="Daylight view of a mixed neighborhood with tree-lined streets, low and mid-rise buildings, and a small park.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +29,112 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "EcoTwin AI",
-        "url": "https://ecotwinai.com",
-        "description": "Software for urban design and energy simulation.",
-        "sameAs": ["https://www.youtube.com/@EcoTwinAI"]
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ecotwinai.com/#organization",
+            "name": "EcoTwin AI",
+            "url": "https://ecotwinai.com/",
+            "email": "hello@ecotwinai.com",
+            "description": "EcoTwin AI builds software for urban design and energy simulation. The product is Eco Digital Twin Sandbox, a browser workspace for architects, planners, and engineers.",
+            "logo": "https://ecotwinai.com/favicon.svg",
+            "sameAs": ["https://www.youtube.com/@EcoTwinAI"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ecotwinai.com/#website",
+            "name": "EcoTwin AI",
+            "url": "https://ecotwinai.com/",
+            "description": "Company site for EcoTwin AI and Eco Digital Twin Sandbox.",
+            "publisher": { "@id": "https://ecotwinai.com/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://app.ecotwinai.com/#sandbox",
+            "name": "Eco Digital Twin Sandbox",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Web",
+            "url": "https://app.ecotwinai.com",
+            "description": "Browser-based 3D workspace for urban modeling, surface and material assignment, map import from OpenStreetMap and Overture, and project packages for energy and microclimate workflows.",
+            "publisher": { "@id": "https://ecotwinai.com/#organization" },
+            "offers": [
+              { "@type": "Offer", "name": "Weekly", "price": "10", "priceCurrency": "USD", "url": "https://app.ecotwinai.com/auth/subscribe.html" },
+              { "@type": "Offer", "name": "Monthly", "price": "35", "priceCurrency": "USD", "url": "https://app.ecotwinai.com/auth/subscribe.html" },
+              { "@type": "Offer", "name": "Quarterly", "price": "100", "priceCurrency": "USD", "url": "https://app.ecotwinai.com/auth/subscribe.html" },
+              { "@type": "Offer", "name": "Yearly", "price": "350", "priceCurrency": "USD", "url": "https://app.ecotwinai.com/auth/subscribe.html" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ecotwinai.com/#faq",
+            "url": "https://ecotwinai.com/#questions",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is EcoTwin AI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "EcoTwin AI is a company that builds software for urban design and energy simulation. It helps architects, planners, and engineers shape more sustainable cities, from early massing to performance-ready digital twins."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is Eco Digital Twin Sandbox?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Eco Digital Twin Sandbox is EcoTwin AI's browser-based 3D workspace at https://app.ecotwinai.com. Users design and edit buildings and landscapes, assign surface and material properties, import map context, and prepare project files for analysis."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is it for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Architects, urban planners, energy and sustainability consultants, researchers, municipalities, and engineering teams working on buildings and neighborhoods."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What works in the app today?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can model in 3D, assign surface types and layers, bring buildings in from OpenStreetMap and Overture through Map Bridge, and save or export .CDT, .ecofile, STL, OBJ, GLB, FBX, and GeoJSON. Accounts, sign-in, and Stripe subscriptions are live. Save and Export need an active plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I run microclimate or building energy simulation now?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not as a general release. PALM microclimate, EnergyPlus building energy, in-scene results, and scenario comparison are in the stack and rolling out. The Simulation menu is not yet available to every user."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I contact EcoTwin AI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the contact form at https://ecotwinai.com/#contact. It asks for your email and a message and delivers them to EcoTwin AI. You can also write to hello@ecotwinai.com."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a subscription cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Individual plans, in US dollars, are weekly 10, monthly 35, quarterly 100, and yearly 350. Billing happens in the app through Stripe Checkout. This site does not take payment."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
-    <header class="site-header is-overlay" data-header>
+    <header class="site-header" data-header>
       <div class="bar">
         <a class="logo" href="#top">
           <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
@@ -52,6 +152,8 @@
           <a class="nav-link" href="#capabilities">Capabilities</a>
           <a class="nav-link" href="#roadmap">Roadmap</a>
           <a class="nav-link" href="#pricing">Pricing</a>
+          <a class="nav-link" href="#questions">Questions</a>
+          <a class="nav-link" href="#contact">Contact</a>
           <a class="nav-link" href="https://app.ecotwinai.com/auth/login.html">Sign in</a>
           <a class="btn btn-primary" href="https://app.ecotwinai.com">Open Sandbox</a>
         </nav>
@@ -60,117 +162,40 @@
 
     <main id="content">
       <section class="hero" id="top">
-        <div class="hero-city">
-          <svg viewBox="20 130 760 660" role="img" aria-labelledby="city-title">
-            <title id="city-title">Massing model of a city block, with low buildings, glazed towers, and trees on a site board</title>
-            <ellipse cx="410" cy="730" rx="280" ry="34" fill="#050908" opacity="0.65"/>
-            <polygon points="369.3,344.2 755.9,567.4 433.7,753.4 47.1,530.2" fill="#1c2c27"/>
-            <polygon points="47.1,530.2 433.7,753.4 433.7,772.0 47.1,548.8" fill="#14211d"/>
-            <polygon points="755.9,567.4 433.7,753.4 433.7,772.0 755.9,586.0" fill="#243832"/>
-            <g class="mass" style="--d:0.05s">
-              <polygon points="412.2,418.6 498.1,468.2 498.1,319.4 412.2,269.8" fill="#8d6a45"/>
-              <polygon points="498.1,468.2 433.7,505.4 433.7,356.6 498.1,319.4" fill="#c9aa7a"/>
-              <polygon points="412.2,269.8 498.1,319.4 433.7,356.6 347.8,307.0" fill="#f4efe6"/>
-            </g>
-            <g class="mass" style="--d:0.12s">
-              <polygon points="358.5,486.8 283.4,530.2 283.4,331.8 358.5,288.4" fill="#3e6550"/>
-              <polygon points="283.4,443.4 358.5,486.8 358.5,288.4 283.4,245.0" fill="#86a492"/>
-              <polygon points="283.4,245.0 358.5,288.4 283.4,331.8 208.2,288.4" fill="#e5f0e9"/>
-            </g>
-            <g class="mass" style="--d:0.18s">
-              <polygon points="584.0,511.6 525.0,545.7 525.0,223.3 584.0,189.2" fill="#2c5f96"/>
-              <polygon points="525.0,477.5 584.0,511.6 584.0,189.2 525.0,155.1" fill="#7eaddc"/>
-              <polygon points="525.0,155.1 584.0,189.2 525.0,223.3 465.9,189.2" fill="#d7e6f6"/>
-              <polyline points="528.2,414.9 580.8,445.3" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-              <polyline points="528.2,350.4 580.8,380.8" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-              <polyline points="528.2,285.9 580.8,316.3" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-              <polyline points="528.2,221.4 580.8,251.8" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-            </g>
-            <g class="mass" style="--d:0.26s">
-              <polygon points="380.0,499.2 476.6,555.0 476.6,319.4 380.0,263.6" fill="#8d6a45"/>
-              <polygon points="476.6,555.0 406.8,595.3 406.8,359.7 476.6,319.4" fill="#c9aa7a"/>
-              <polygon points="380.0,263.6 476.6,319.4 406.8,359.7 310.2,303.9" fill="#f4efe6"/>
-            </g>
-            <g class="mass" style="--d:0.34s">
-              <polygon points="218.9,517.8 315.6,573.6 315.6,486.8 218.9,431.0" fill="#8d6a45"/>
-              <polygon points="315.6,573.6 261.9,604.6 261.9,517.8 315.6,486.8" fill="#c9aa7a"/>
-              <polygon points="218.9,431.0 315.6,486.8 261.9,517.8 165.2,462.0" fill="#f4efe6"/>
-            </g>
-            <g class="mass" style="--d:0.42s">
-              <polygon points="594.8,536.4 669.9,579.8 669.9,468.2 594.8,424.8" fill="#8d6a45"/>
-              <polygon points="669.9,579.8 616.3,610.8 616.3,499.2 669.9,468.2" fill="#c9aa7a"/>
-              <polygon points="594.8,424.8 669.9,468.2 616.3,499.2 541.1,455.8" fill="#f4efe6"/>
-            </g>
-            <g class="mass" style="--d:0.5s">
-              <polygon points="551.8,610.8 476.6,654.2 476.6,480.6 551.8,437.2" fill="#2c5f96"/>
-              <polygon points="487.4,573.6 551.8,610.8 551.8,437.2 487.4,400.0" fill="#7eaddc"/>
-              <polygon points="487.4,400.0 551.8,437.2 476.6,480.6 412.2,443.4" fill="#d7e6f6"/>
-              <polyline points="490.6,532.1 548.6,565.5" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-              <polyline points="490.6,488.7 548.6,522.1" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-              <polyline points="490.6,445.3 548.6,478.7" fill="none" stroke="#1d4068" stroke-width="1.4" opacity="0.55"/>
-            </g>
-            <g class="mass" style="--d:0.58s">
-              <polygon points="337.0,598.4 423.0,648.0 423.0,511.6 337.0,462.0" fill="#3e6550"/>
-              <polygon points="423.0,648.0 358.5,685.2 358.5,548.8 423.0,511.6" fill="#86a492"/>
-              <polygon points="337.0,462.0 423.0,511.6 358.5,548.8 272.6,499.2" fill="#e5f0e9"/>
-            </g>
-            <g class="mass" style="--d:0.66s">
-              <polygon points="498.1,679.0 455.2,703.8 455.2,604.6 498.1,579.8" fill="#8d6a45"/>
-              <polygon points="455.2,654.2 498.1,679.0 498.1,579.8 455.2,555.0" fill="#c9aa7a"/>
-              <polygon points="455.2,555.0 498.1,579.8 455.2,604.6 412.2,579.8" fill="#f4efe6"/>
-            </g>
-            <g class="mass tree" style="--d:0.72s">
-              <polygon points="455.2,493.0 473.4,503.5 473.4,460.1 455.2,449.6" fill="#3e6550"/>
-              <polygon points="473.4,503.5 455.2,514.1 455.2,470.7 473.4,460.1" fill="#6d9a7c"/>
-              <polygon points="455.2,449.6 473.4,460.1 455.2,470.7 436.9,460.1" fill="#d7ebe0"/>
-            </g>
-            <g class="mass tree" style="--d:0.76s">
-              <polygon points="283.4,530.2 299.5,539.5 299.5,505.4 283.4,496.1" fill="#3e6550"/>
-              <polygon points="299.5,539.5 283.4,548.8 283.4,514.7 299.5,505.4" fill="#6d9a7c"/>
-              <polygon points="283.4,496.1 299.5,505.4 283.4,514.7 267.2,505.4" fill="#d7ebe0"/>
-            </g>
-            <g class="mass tree" style="--d:0.8s">
-              <polygon points="541.1,592.2 558.3,602.1 558.3,564.9 541.1,555.0" fill="#3e6550"/>
-              <polygon points="558.3,602.1 541.1,612.0 541.1,574.8 558.3,564.9" fill="#6d9a7c"/>
-              <polygon points="541.1,555.0 558.3,564.9 541.1,574.8 523.9,564.9" fill="#d7ebe0"/>
-            </g>
-            <g class="mass tree" style="--d:0.84s">
-              <polygon points="240.4,592.2 254.4,600.3 254.4,572.4 240.4,564.3" fill="#3e6550"/>
-              <polygon points="254.4,600.3 240.4,608.3 240.4,580.4 254.4,572.4" fill="#6d9a7c"/>
-              <polygon points="240.4,564.3 254.4,572.4 240.4,580.4 226.4,572.4" fill="#d7ebe0"/>
-            </g>
-            <g class="mass tree" style="--d:0.88s">
-              <polygon points="197.4,480.6 213.5,489.9 213.5,458.9 197.4,449.6" fill="#3e6550"/>
-              <polygon points="213.5,489.9 197.4,499.2 197.4,468.2 213.5,458.9" fill="#6d9a7c"/>
-              <polygon points="197.4,449.6 213.5,458.9 197.4,468.2 181.3,458.9" fill="#d7ebe0"/>
-            </g>
-          </svg>
-        </div>
-        <div class="hero-copy">
-          <div class="wrap">
-            <p class="eyebrow">EcoTwin AI · Urban design &amp; energy simulation</p>
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">EcoTwin AI · Urban design and energy simulation</p>
             <h1>
               <span class="line">Design cities.</span>
               <span class="line">Simulate performance.</span>
               <span class="line">In one browser.</span>
             </h1>
-            <p class="lede">EcoTwin AI builds Eco Digital Twin Sandbox — model buildings and landscapes in 3D, assign real surface properties, and prepare for industry-grade microclimate and energy analysis.</p>
+            <p class="lede">EcoTwin AI builds Eco Digital Twin Sandbox, a browser workspace for architects, planners, and engineers. Model buildings and landscapes in 3D, assign real surface properties, and prepare for industry-grade microclimate and energy analysis.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://app.ecotwinai.com">Open Sandbox <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-              <a class="btn btn-line" href="https://www.youtube.com/@EcoTwinAI" target="_blank" rel="noopener noreferrer">Watch tutorials<span class="sr-only"> (opens in a new tab)</span></a>
+              <a class="btn btn-ink" href="https://www.youtube.com/@EcoTwinAI" target="_blank" rel="noopener noreferrer">Watch tutorials<span class="sr-only"> (opens in a new tab)</span></a>
             </div>
           </div>
+          <figure class="hero-photo">
+            <img src="images/hero-neighborhood.jpg" width="1280" height="720" fetchpriority="high" decoding="async" alt="Daylight view of a mixed neighborhood with tree-lined streets, low and mid-rise buildings, and a small park.">
+          </figure>
         </div>
       </section>
 
       <section class="section" id="purpose">
-        <div class="wrap">
+        <div class="wrap split">
           <div data-reveal>
             <p class="eyebrow">Purpose</p>
             <h2>From early massing to a performance-ready twin.</h2>
             <p class="lede">EcoTwin AI is a specialized company focused on software for urban design and energy simulation. We build tools that help architects, planners, and engineers shape more sustainable cities — from early massing to performance-ready digital twins.</p>
             <p class="audience">For architects, urban planners, energy and sustainability consultants, researchers, municipalities, and engineering teams working on buildings and neighborhoods.</p>
           </div>
+          <figure class="figure" data-reveal>
+            <img src="images/street-canopy.jpg" width="1152" height="864" alt="A sunny city street shaded by trees, with buildings in stone, terracotta, and pale green." loading="lazy" decoding="async">
+            <figcaption>Shade, streets, and the spaces between buildings are part of the design problem.</figcaption>
+          </figure>
+        </div>
+        <div class="wrap">
           <ul class="diffs">
             <li data-reveal style="--d:0.05s">
               <h3>End-to-end urban twin</h3>
@@ -192,14 +217,20 @@
         </div>
       </section>
 
-      <section class="section" id="product" style="padding-top: 0">
-        <div class="wrap">
+      <section class="section tint-sage" id="product">
+        <div class="wrap split">
           <div data-reveal>
             <p class="eyebrow">Product</p>
             <h2>Eco Digital Twin Sandbox</h2>
             <p class="lede">The sandbox brings urban modeling into a single browser-based workspace. Design and edit the built environment in 3D, assign surface and material properties, and prepare models for rigorous analysis — without chaining together disconnected desktop tools.</p>
             <p class="product-cta"><a class="btn btn-primary" href="https://app.ecotwinai.com">Launch Sandbox <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
           </div>
+          <figure class="figure" data-reveal>
+            <img src="images/massing-model.jpg" width="1152" height="864" alt="A colorful architectural massing model of a city block, with blocks in sand, sage, and blue on a light table." loading="lazy" decoding="async">
+            <figcaption>Early massing, studied as a model you can edit in the browser.</figcaption>
+          </figure>
+        </div>
+        <div class="wrap">
           <ol class="pipeline" data-reveal>
             <li>
               <span class="idx">01</span>
@@ -226,6 +257,16 @@
             <p class="eyebrow">Capabilities</p>
             <h2>What the sandbox does today.</h2>
             <p class="lede">This is the live workspace at app.ecotwinai.com. In-app simulation runs are not open to every user yet — those are under Roadmap.</p>
+          </div>
+          <div class="pair" data-reveal>
+            <figure class="figure">
+              <img src="images/city-blocks.jpg" width="1152" height="864" alt="Overhead view of city blocks, streets, courtyards, and small parks in daylight." loading="lazy" decoding="async">
+              <figcaption>Map Bridge loads a real place: buildings from OpenStreetMap and Overture, with heights where those sources provide them.</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="images/building-surfaces.jpg" width="1152" height="864" alt="Close view of brick, timber, glass, stone, and a planted roof edge in daylight." loading="lazy" decoding="async">
+              <figcaption>Surface types cover plants, soils, water, roads, buildings, optical materials, and more.</figcaption>
+            </figure>
           </div>
           <div class="cap-list">
             <article class="cap" data-reveal>
@@ -307,12 +348,18 @@
       </section>
 
       <section class="section band" id="roadmap">
-        <div class="wrap">
+        <div class="wrap split">
           <div data-reveal>
             <p class="eyebrow">Coming soon</p>
             <h2>Already in the stack. Rolling out to the workspace.</h2>
             <p class="lede">Capabilities already in our stack, rolling out to users shortly: PALM microclimate, EnergyPlus building energy, in-scene results, scenario comparison, and expanded carbon workflows.</p>
           </div>
+          <figure class="figure" data-reveal>
+            <img src="images/sunlit-court.jpg" width="1152" height="864" alt="A sunny urban courtyard with a tree, pale paving, and buildings catching both sun and shade." loading="lazy" decoding="async">
+            <figcaption>Microclimate studies, still rolling out, look at heat, wind, and comfort in places like this.</figcaption>
+          </figure>
+        </div>
+        <div class="wrap">
           <ol class="roadmap">
             <li data-reveal>
               <span class="num">01</span>
@@ -407,6 +454,71 @@
         </div>
       </section>
 
+      <section class="section tint-sand" id="questions">
+        <div class="wrap">
+          <div data-reveal>
+            <p class="eyebrow">Questions</p>
+            <h2>Plain answers about the company and the sandbox.</h2>
+          </div>
+          <div class="faq">
+            <article>
+              <h3>What is EcoTwin AI?</h3>
+              <p>EcoTwin AI is a company that builds software for urban design and energy simulation. The work is for architects, planners, and engineers who need more sustainable cities, from early massing to a digital twin that is ready for performance analysis.</p>
+            </article>
+            <article>
+              <h3>What is Eco Digital Twin Sandbox?</h3>
+              <p>Eco Digital Twin Sandbox is the browser app at <a href="https://app.ecotwinai.com">app.ecotwinai.com</a>. It is one workspace for 3D urban modeling, surface and material assignment, map import, and project files. This website explains the company. It is not the editor.</p>
+            </article>
+            <article>
+              <h3>Who is it for?</h3>
+              <p>Architects, urban planners, energy and sustainability consultants, researchers, municipalities, and engineering teams working on buildings and neighborhoods.</p>
+            </article>
+            <article>
+              <h3>What works in the app today?</h3>
+              <p>You can model in 3D, assign surface types and layers, bring buildings in from OpenStreetMap and Overture through Map Bridge, and save or export .CDT, .ecofile, STL, OBJ, GLB, FBX, and GeoJSON. Accounts, sign-in, and Stripe subscriptions are live. Save and Export need an active plan.</p>
+            </article>
+            <article>
+              <h3>Can I run microclimate or building energy simulation now?</h3>
+              <p>Not as a general release. PALM microclimate, EnergyPlus building energy, in-scene results, and scenario comparison are in the stack and rolling out. The Simulation menu is not yet available to every user.</p>
+            </article>
+            <article>
+              <h3>How do I contact EcoTwin AI?</h3>
+              <p>Use the contact form on this page. It asks for your email and a message, and delivers that note to EcoTwin AI. You can also write to <a href="mailto:hello@ecotwinai.com">hello@ecotwinai.com</a>.</p>
+            </article>
+            <article>
+              <h3>How much does a subscription cost?</h3>
+              <p>Individual plans, in US dollars, are weekly $10, monthly $35, quarterly $100, and yearly $350. Billing happens in the app through Stripe Checkout. This site does not take payment. <a href="https://app.ecotwinai.com/auth/subscribe.html">Subscribe in the app</a>.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint-sky" id="contact">
+        <div class="wrap">
+          <div data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h2>Send us a message.</h2>
+            <p class="lede">Leave your email and a note. We read messages sent from this page at EcoTwin AI.</p>
+          </div>
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/noreply@ecotwinai.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Message from ecotwinai.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <p class="hp" aria-hidden="true">
+              <label>Company website <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+            </p>
+            <label for="contact-email">Your email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" placeholder="you@studio.com">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required minlength="8" maxlength="4000" rows="6" placeholder="What should we know?"></textarea>
+            <div class="contact-actions">
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </div>
+            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
       <section class="close" id="start">
         <div class="wrap">
           <p class="eyebrow">Open the workspace</p>
@@ -414,7 +526,7 @@
           <p class="lede">Model the massing, assign its surfaces, and keep the file ready for the simulations now rolling out.</p>
           <div class="close-actions">
             <a class="btn btn-primary" href="https://app.ecotwinai.com">Open Sandbox <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-            <a class="btn btn-line" href="https://www.youtube.com/@EcoTwinAI" target="_blank" rel="noopener noreferrer">Watch tutorials<span class="sr-only"> (opens in a new tab)</span></a>
+            <a class="btn btn-ink" href="https://www.youtube.com/@EcoTwinAI" target="_blank" rel="noopener noreferrer">Watch tutorials<span class="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
       </section>
@@ -427,7 +539,7 @@
             <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
               <path d="M4 19.2 13 14.4 13 23.2 4 28Z" fill="#8d6a45"/>
               <path d="M13 14.4 23 19.4 23 28.2 13 23.2Z" fill="#c9aa7a"/>
-              <path d="M7 13.2 16 8.2 26 13.6 17 18.6Z" fill="#f3efe6"/>
+              <path d="M7 13.2 16 8.2 26 13.6 17 18.6Z" fill="#1c2a32"/>
             </svg>
             <span>EcoTwin <span class="logo-ai">AI</span></span>
           </a>
@@ -449,6 +561,7 @@
             <li><a href="mailto:hello@ecotwinai.com">hello@ecotwinai.com</a></li>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="terms.html">Terms</a></li>
+            <li><a href="llms.txt">Site facts</a></li>
           </ul>
         </div>
       </div>
