@@ -500,13 +500,11 @@
             <h2>Send us a message.</h2>
             <p class="lede">Leave your email and a note. We read messages sent from this page at EcoTwin AI.</p>
           </div>
-          <form class="contact-form" id="contact-form" action="https://formsubmit.co/noreply@ecotwinai.com" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="Message from ecotwinai.com">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <p class="hp" aria-hidden="true">
-              <label>Company website <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
-            </p>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="86086a20-506e-4ba7-b3a5-5eba20154818">
+            <input type="hidden" name="subject" value="Message from ecotwinai.com">
+            <input type="hidden" name="from_name" value="EcoTwin AI website">
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label for="contact-email">Your email</label>
             <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" placeholder="you@studio.com">
             <label for="contact-message">Message</label>

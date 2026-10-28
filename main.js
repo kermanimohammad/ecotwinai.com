@@ -103,9 +103,9 @@
       var data = new FormData(contactForm);
       var email = String(data.get("email") || "").trim();
       var message = String(data.get("message") || "").trim();
-      var honey = String(data.get("_honey") || "").trim();
+      var botcheck = data.get("botcheck");
 
-      if (honey) {
+      if (botcheck) {
         setStatus("ok", "Thanks. Your message is on its way.");
         contactForm.reset();
         return;
@@ -123,37 +123,49 @@
         return;
       }
 
+      var accessKey = String(data.get("access_key") || "").trim();
+      if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+        setStatus("error", "The contact form is not configured yet. Write to support@ecotwinai.com.");
+        return;
+      }
+
       submitButton.disabled = true;
       setStatus("", "Sending…");
 
-      fetch("https://formsubmit.co/ajax/noreply@ecotwinai.com", {
+      var payload = new FormData(contactForm);
+      payload.set("email", email);
+      payload.set("message", message);
+      payload.set("replyto", email);
+
+      fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          email: email,
-          message: message,
-          _subject: "Message from ecotwinai.com",
-          _template: "table",
-          _captcha: "false",
-          _replyto: email
-        })
+        headers: { Accept: "application/json" },
+        body: payload
       })
         .then(function (response) {
-          return response.json().then(function (body) {
-            return { ok: response.ok, body: body };
-          });
+          return response
+            .json()
+            .catch(function () {
+              return {};
+            })
+            .then(function (body) {
+              return { ok: response.ok, body: body };
+            });
         })
         .then(function (result) {
-          var succeeded = result.ok && result.body && String(result.body.success) === "true";
+          var succeeded =
+            result.ok &&
+            result.body &&
+            (result.body.success === true || String(result.body.success) === "true");
           if (!succeeded) throw new Error("send failed");
           contactForm.reset();
           setStatus("ok", "Thanks. Your message is on its way.");
         })
         .catch(function () {
-          setStatus("error", "We couldn’t send that just now. Try again, or write to support@ecotwinai.com.");
+          setStatus(
+            "error",
+            "We couldn’t send that just now. Try again, or write to support@ecotwinai.com."
+          );
         })
         .then(function () {
           submitButton.disabled = false;
