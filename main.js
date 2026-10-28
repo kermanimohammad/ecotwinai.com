@@ -126,7 +126,7 @@
       submitButton.disabled = true;
       setStatus("", "Sending…");
 
-      fetch("https://formsubmit.co/ajax/4fa0247cbdd8a319f0e65418a5a04d0c", {
+      fetch("https://formsubmit.co/ajax/noreply@ecotwinai.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@
           setStatus("ok", "Thanks. Your message is on its way.");
         })
         .catch(function () {
-          setStatus("error", "We couldn’t send that just now. Try again, or write to hello@ecotwinai.com.");
+          setStatus("error", "We couldn’t send that just now. Try again, or write to support@ecotwinai.com.");
         })
         .then(function () {
           submitButton.disabled = false;

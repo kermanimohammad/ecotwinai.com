@@ -51,7 +51,7 @@ Save and Export require an active subscription. Card numbers are handled by Stri
 - [Privacy placeholder](https://ecotwinai.com/privacy.html)
 - [Terms placeholder](https://ecotwinai.com/terms.html)
 - Contact form on the company site: https://ecotwinai.com/#contact (visitor email and message are emailed to noreply@ecotwinai.com)
-- Contact: hello@ecotwinai.com
+- Contact: support@ecotwinai.com
 
 ## Do not claim
 
